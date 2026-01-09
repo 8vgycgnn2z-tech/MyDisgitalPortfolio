@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #d84c6f, #c73b6c);
+}
+
+/* Header */
+.header {
+  background: white;
+  padding: 20px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 22px;
+  color: #d84c6f;
+}
+
+nav a {
+  margin-left: 25px;
+  text-decoration: none;
+  color: #444;
+  font-size: 14px;
+}
+
+nav a.active {
+  color: #d84c6f;
+  border-bottom: 2px solid #d84c6f;
+}
+
+/* About Section */
+.about {
+  background: white;
+  margin: 40px auto;
+  width: 85%;
+  border-radius: 6px;
+  padding: 60px;
+  animation: fadeUp 1s ease;
+}
+
+.about-container {
+  display: flex;
+  gap: 60px;
+  align-items: center;
+}
+
+/* Image */
+.about-image img {
+  width: 260px;
+  height: 360px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+/* Content */
+.about-content h1 {
+  font-size: 40px;
+  font-weight: 700;
+  color: #444;
+}
+
+.about-content h4 {
+  color: #d84c6f;
+  margin: 15px 0 20px;
+}
+
+.about-content p {
+  font-size: 14px;
+  color: #777;
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+/* Social Icons */
+.social-icons i {
+  margin-right: 15px;
+  font-size: 18px;
+  color: #444;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.social-icons i:hover {
+  color: #d84c6f;
+  transform: translateY(-3px);
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  color: white;
+  padding: 25px 0;
+  font-weight: 500;
+}
+
+/* Animation */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 📱 MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+
+  .header {
+    padding: 20px;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  nav a {
+    margin: 0 10px;
+  }
+
+  .about {
+    width: 92%;
+    padding: 30px;
+  }
+
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-image img {
+    width: 220px;
+    height: 300px;
+  }
+
+  .about-content h1 {
+    font-size: 32px;
+  }
+
+  .social-icons {
+    margin-top: 20px;
+  }
+}

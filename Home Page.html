@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Digital Portfolio</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <style>
+    /* RESET */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+    height: 100vh;
+    background: url("Home Page.jpg") no-repeat center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ---------- CARD ---------- */
+.card {
+    width: 90%;
+    height: 85%;
+    background: rgba(0,0,0,0.78);
+    border-radius: 20px;
+    padding: 30px 50px;
+    color: #fff;
+    animation: fadeIn 1.5s ease;
+}
+
+    /* NAVBAR */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 60px;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: 700;
+      color: #ff8c2b;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #bfbfbf;
+      font-size: 14px;
+      transition: 0.3s;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: #ff8c2b;
+    }
+
+    .btn {
+      padding: 10px 22px;
+      border-radius: 8px;
+      border: 1px solid #ff8c2b;
+      background: transparent;
+      color: #ff8c2b;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn.primary {
+      background: #ff8c2b;
+      color: #000;
+      border: none;
+    }
+
+    /* HERO */
+    .hero {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .hero-text h4 {
+      color: #bfbfbf;
+      margin-bottom: 8px;
+      font-weight: 400;
+    }
+
+    .hero-text h2 {
+      font-size: 26px;
+      margin-bottom: 10px;
+    }
+
+    .hero-text h1 {
+      font-size: 48px;
+      color: #ff8c2b;
+      margin-bottom: 25px;
+    }
+
+    .socials {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 25px;
+    }
+
+    .socials a {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      border: 1px solid #3a3a3a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #bfbfbf;
+      transition: 0.3s;
+    }
+
+    .socials a:hover {
+      color: #ff8c2b;
+      border-color: #ff8c2b;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 15px;
+    }
+
+    /* IMAGE */
+    .hero-image {
+      display: flex;
+      justify-content: center;
+    }
+
+    .circle {
+      width: 360px;
+      height: 360px;
+      border-radius: 50%;
+      background: #1a1a1a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .circle img {
+      width: 100%;
+      filter: grayscale(100%);
+    }
+
+/* ---------- ANIMATIONS ---------- */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <nav class="navbar">
+      <div class="logo">Home</div>
+
+      <ul class="nav-links">
+        <li><a class="active" href="Home Page.html">Home</a></li>
+        <li><a href="About Me.html">About Me</a></li>
+        <li><a href="Achievements.html">Achievements</a></li>
+        <li><a href="Units.html">Units</a></li>
+        <li><a href="CV.html">CV</a></li>
+      </ul>
+
+    </nav>
+
+    <section class="hero">
+      <div class="hero-text">
+        <h4>Hi I am</h4>
+        <h2>Samandeep Singh</h2>
+        <h1>IT Level-2</h1>
+        <p style="font-family: 'Poppins', Arial, sans-serif;">I’m an aspiring web developer & IT professional.
+        <br>I’m passionate about building responsive, user-friendly websites and developing strong technical skills in web development and IT systems.
+        <br>This digital portfolio showcases my projects, skills, and learning journey.
+        </p>
+
+        <div class="socials">
+          <a href="https://www.instagram.com/sardar_.999_?igsh=dDhya3RiaHk3NWg1"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/in/samandeep-singh-2a85003a0/"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://x.com/deep34597"><i class="fab fa-twitter"></i></a>
+        </div>
+
+      </div>
+
+      <div class="hero-image">
+        <div class="circle">
+          <!-- THIS LINE CONTROLS THE PERSON IMAGE -->
+          <img src="Me.png" alt="Me">
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    console.log('Portfolio loaded');
+  </script>
+
+</body>
+</html>

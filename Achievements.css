@@ -1,0 +1,188 @@
+/* ============ RESET ============ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: url("Achievements.jpg") no-repeat center center / cover;
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Background Text */
+body::before {
+  content: "MOUNTAIN\nDIGITAL";
+  position: absolute;
+  top: 45%;
+  left: 8%;
+  transform: translateY(-50%);
+  font-size: 110px;
+  font-weight: 800;
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.06);
+  white-space: pre-line;
+  z-index: 0;
+}
+
+body::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(6, 22, 52, 0.85) 0%,
+    rgba(6, 22, 52, 0.65) 35%,
+    rgba(6, 22, 52, 0.35) 55%,
+    rgba(6, 22, 52, 0.1) 75%,
+    rgba(6, 22, 52, 0) 100%
+  );
+  z-index: 1;
+}
+
+
+/* ============ NAVBAR ============ */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 80px;
+  position: relative;
+  z-index: 2;
+}
+
+header h2 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+nav a {
+  margin-left: 30px;
+  text-decoration: none;
+  color: #d6ddff;
+  font-size: 15px;
+  transition: color 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+  color: #ffffff;
+}
+
+/* ============ HERO ============ */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 120px 80px;
+  min-height: calc(100vh - 100px);
+  position: relative;
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 1.2s ease;
+}
+
+/* Left Content */
+.content {
+  max-width: 550px;
+}
+
+.content h1 {
+  font-size: 52px;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 25px;
+}
+
+.content p {
+  font-size: 15px;
+  color: #d1d8ff;
+  max-width: 420px;
+  line-height: 1.6;
+  margin-bottom: 35px;
+}
+
+/* Button */
+.content button {
+  padding: 14px 32px;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #7b7bff, #5a5aff);
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 0 10px 25px rgba(123, 123, 255, 0.4);
+  transition: transform 0.3s ease;
+}
+
+.content button:hover {
+  transform: translateY(-2px);
+}
+
+/* ============ GLASS CARD ============ */
+.card {
+  width: 320px;
+  height: 420px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  box-shadow:
+    0 25px 45px rgba(0, 0, 0, 0.35),
+    inset 0 0 20px rgba(255, 255, 255, 0.08);
+
+  position: relative;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 22px;
+  background: linear-gradient(
+    135deg,
+    rgba(255,255,255,0.25),
+    rgba(255,255,255,0.05),
+    transparent
+  );
+  pointer-events: none;
+}
+
+.card img {
+  width: 90%;
+  height: 90%;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+  z-index: 1;
+}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 900px) {
+  body::before {
+    font-size: 70px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 100px 40px;
+  }
+
+  .card {
+    margin-top: 50px;
+  }
+}
